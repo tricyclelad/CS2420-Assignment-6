@@ -11,13 +11,12 @@
 //Set the initial values in the set to -1
 //Constructor
 
-DisjointSet::DisjointSet(int elements)
+DisjointSet::DisjointSet(int elements) : v(elements)
 {
-    for (int i = 0; i < SIZE; i++) {
+    for (int i = 0; i < v.size(); i++) {
         v[i].first = i;
         v[i].second = 1;
         
     }
     
 }
-

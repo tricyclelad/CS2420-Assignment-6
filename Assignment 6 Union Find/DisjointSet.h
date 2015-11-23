@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <vector>
 using namespace std;
-const int SIZE = 30;
+
 class DisjointSet
 {
 public:
@@ -24,8 +24,7 @@ public:
     void unionSets(int root1, int root2);
     
 private:
-    pair<int, int> v[30];
-    
+    vector<pair<int, int>> v;
 };
 
 #endif /* DisjointSet_h */
