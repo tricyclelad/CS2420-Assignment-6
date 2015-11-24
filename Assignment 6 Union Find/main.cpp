@@ -8,12 +8,16 @@
 
 #include <iostream>
 #include "DisjointSet.h"
+#include "Grid.h"
 using namespace std;
+
 void test();
 void doAFind(DisjointSet set);
 int main() {
     
-    test();
+    //test();
+    
+   
     
     return 0;
 }
