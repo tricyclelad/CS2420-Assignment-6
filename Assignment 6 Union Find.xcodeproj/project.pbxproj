@@ -10,6 +10,7 @@
 		408333FE1C03C20500540EC0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 408333FD1C03C20500540EC0 /* main.cpp */; };
 		408334061C03C2C200540EC0 /* DisjointSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 408334041C03C2C200540EC0 /* DisjointSet.cpp */; };
 		408334091C03F16D00540EC0 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 408334071C03F16D00540EC0 /* Grid.cpp */; };
+		4083340C1C03F4D000540EC0 /* Percolate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4083340A1C03F4D000540EC0 /* Percolate.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		408334051C03C2C200540EC0 /* DisjointSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisjointSet.h; sourceTree = "<group>"; };
 		408334071C03F16D00540EC0 /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
 		408334081C03F16D00540EC0 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		4083340A1C03F4D000540EC0 /* Percolate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Percolate.cpp; sourceTree = "<group>"; };
+		4083340B1C03F4D000540EC0 /* Percolate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Percolate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				408333FD1C03C20500540EC0 /* main.cpp */,
+				4083340A1C03F4D000540EC0 /* Percolate.cpp */,
+				4083340B1C03F4D000540EC0 /* Percolate.h */,
 				408334071C03F16D00540EC0 /* Grid.cpp */,
 				408334081C03F16D00540EC0 /* Grid.h */,
 				408334041C03C2C200540EC0 /* DisjointSet.cpp */,
@@ -129,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				408334091C03F16D00540EC0 /* Grid.cpp in Sources */,
+				4083340C1C03F4D000540EC0 /* Percolate.cpp in Sources */,
 				408334061C03C2C200540EC0 /* DisjointSet.cpp in Sources */,
 				408333FE1C03C20500540EC0 /* main.cpp in Sources */,
 			);

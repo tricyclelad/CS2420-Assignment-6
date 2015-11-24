@@ -9,6 +9,7 @@
 #include <iostream>
 #include "DisjointSet.h"
 #include "Grid.h"
+#include "Percolate.h"
 using namespace std;
 
 void test();
@@ -17,7 +18,9 @@ int main() {
     
     //test();
     
-   
+    Percolate test;
+    
+
     
     return 0;
 }
