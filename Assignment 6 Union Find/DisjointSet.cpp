@@ -16,9 +16,10 @@ using namespace std;
 DisjointSet::DisjointSet(int elements) : v(elements)
 {
     for (int i = 0; i < v.size(); i++) {
-        v[i].first = i;
-        v[i].second = 1;
-        
+        v[i].parentID = i;
+        v[i].height = 1;
+        v[i].lowestRow = -1;
+        v[i].highestRow = -1;
     }
     
 }
@@ -30,22 +31,22 @@ DisjointSet::DisjointSet(int elements) : v(elements)
 //and uses path compression to assign new parent id
 int DisjointSet::find(int x) 
 {
-    if (v[x].first==x)
+    if (v[x].parentID==x)
         return x;
     else
     {
         
-        return v[x].first = find(v[x].first);
+        return v[x].parentID = find(v[x].parentID);
     }
 }
 //Find with no path compression
 int DisjointSet::findNoPath(int x)
 {
-    if (v[x].first==x)
+    if (v[x].parentID==x)
         return x;
     else
-       // v[x].second = 0;
-        return findNoPath(v[x].first);
+
+        return findNoPath(v[x].parentID);
 }
 //smart union, union by size
 void DisjointSet::unionSets(int root1, int root2)
@@ -58,21 +59,21 @@ void DisjointSet::unionSets(int root1, int root2)
         return;
     }
     
-    if (v[realRoot2].second > v[realRoot1].second)
-        v[realRoot1].first = realRoot2;
+    if (v[realRoot2].height > v[realRoot1].height)
+        v[realRoot1].parentID = realRoot2;
     else
     {
-        if(v[realRoot1].second == v[realRoot2].second)
-        v[realRoot1].second++;
-        v[realRoot2].first = realRoot1;
+        if(v[realRoot1].height == v[realRoot2].height)
+        v[realRoot1].height++;
+        v[realRoot2].parentID = realRoot1;
     }
 }
 //Prints out the contents of the vector
 void DisjointSet::print()
 {
-    cout << "i |ID|HEIGHT " << endl;
+    cout << "i |ID|HEIGHT|LOW ROW|HIGH ROW " << endl;
     for (int i = 0; i < v.size(); i++) {
-        cout << i << " |" << v[i].first << " |" << v[i].second << endl;
+        cout << i << " |" << v[i].parentID << " |" << v[i].height << "     |" <<  v[i].lowestRow <<"     |" << v[i].highestRow <<endl;
         
     }
 

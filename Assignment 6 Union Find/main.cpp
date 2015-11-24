@@ -16,9 +16,9 @@ void test();
 void doAFind(DisjointSet set);
 int main() {
     
-    //test();
+    test();
     
-    Percolate test;
+   // Percolate test;
     
 
     

@@ -12,6 +12,14 @@
 #include <stdio.h>
 #include <vector>
 using namespace std;
+struct arrayItems
+{
+    int parentID;
+    int height;
+    int lowestRow;
+    int highestRow;
+    
+};
 
 class DisjointSet
 {
@@ -26,7 +34,7 @@ public:
 private:
     //a vector of pairs where the first int is the parentID and the second int is the size.
     //a size of 1 = the root of a set
-    vector<pair<int, int>> v;
+    vector<arrayItems> v;
 };
 
 #endif /* DisjointSet_h */
