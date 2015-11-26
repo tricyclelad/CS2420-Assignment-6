@@ -10,17 +10,21 @@
 #include "DisjointSet.h"
 #include "Grid.h"
 #include "Percolate.h"
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 void test();
 void doAFind(DisjointSet set);
+
 int main() {
+srand (time(NULL));
     
     test();
     
-   // Percolate test;
-    
-
+    Percolate test;
+   
+    test.solve();
     
     return 0;
 }

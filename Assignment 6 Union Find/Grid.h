@@ -10,7 +10,13 @@
 #define Grid_h
 #include <stdio.h>
 const int SIZE = 20;
-
+struct gridItems
+{
+    char character;
+    int ID;
+    int row;
+    int column;
+};
 class Grid
 {
 //Using a 20-by-20 grid, (1) show the grid after every 50 sites have been opened and (2) show the
@@ -21,8 +27,8 @@ class Grid
 public:
     Grid();
     void print();
-    char site[SIZE][SIZE];
-    
+    void printID();
+    gridItems site[SIZE][SIZE];
     
 };
 
